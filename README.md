@@ -1,6 +1,8 @@
 
 # Todo React App
 
+![image](https://github.com/Amitabh2004/Todo-React-app/assets/120775614/8249dee4-6389-4be3-a24b-d690d58c55b0)
+
 **Todo React App** is a simple web application built with React that allows users to manage their tasks effectively.
 
 ## Features
