@@ -174,8 +174,12 @@ html {
   height: 27px;
   border-radius: 50%;
   border: 2px solid rgb(243, 66, 17);
-  background-color: rgb(49, 46, 46);
+  background-color: rgb(49, 46, 46); /* Default background color */
   cursor: pointer;
+}
+
+.task-box .radio-btn.checked {
+  background-color: green; /* Change to green when checked */
 }
 
 .task-box .task-text {
