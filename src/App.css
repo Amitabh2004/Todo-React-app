@@ -3,14 +3,12 @@
   padding: 0;
   box-sizing: border-box;
 }
-
 body,
 html {
   height: 100%;
   font-family: Arial, Helvetica, sans-serif;
   background-color: black;
 }
-
 .header {
   display: flex;
   flex-direction: row;
@@ -19,56 +17,43 @@ html {
   align-items: center;
   margin: 28px 60px;
 }
-
 .header .logo-img {
   width: 100px;
 }
-
 .header .profile-img {
   width: 50px;
 }
-
 .header .profile-img:hover {
   cursor: pointer;
 }
-
 .header .logo-img:hover {
   cursor: pointer;
 }
-
 .rect-border {
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  padding: 20px;
-  margin: 0 20px;
 }
-
-.rect-border .rectangle-og-border {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border: 1px solid rgb(221, 151, 22);
-  padding: 50px 50px;
-  border-radius: 50px;
-  flex-wrap: wrap; /* This ensures content wraps on smaller screens */
-  gap: 20px; /* Space between elements */
-}
-
 .rect-border .text-div {
   display: flex;
   flex-direction: column;
   max-width: 700px;
-  text-align: center;
+  margin-right: 30px;
 }
-
+.rect-border .rectangle-og-border {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgb(221, 151, 22);
+  padding: 50px 50px;
+  border-radius: 50px;
+}
 .rect-border .upper-text {
   color: rgb(232, 232, 192);
   font-size: 36px;
   font-weight: 700;
 }
-
 .rect-border .lower-text {
   color: rgb(232, 232, 192);
   font-size: 19px;
@@ -76,22 +61,16 @@ html {
   word-spacing: 5px;
   margin-left: 7px;
 }
-
 .rect-border .circle {
   border: 1px solid rgb(244, 109, 19);
   padding: 30px;
   background-color: rgb(243, 66, 17);
   border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
-
 .rect-border .circle .number-count {
   font-size: 60px;
   font-weight: 600;
 }
-
 .rect-border .input-div {
   display: flex;
   text-align: center;
@@ -99,7 +78,6 @@ html {
   width: 450px;
   margin: 30px 0px;
 }
-
 .rect-border .input-div .input-field {
   padding: 15px;
   border-radius: 18px;
@@ -108,12 +86,11 @@ html {
   background-color: rgb(41, 37, 37);
   border: none;
   font-size: 15px;
+  color: white; /* Ensure text is visible */
 }
-
 .rect-border .input-div .input-field:focus {
   color: white;
 }
-
 .rect-border .input-div .add-button {
   border-radius: 30px;
   width: 64px;
@@ -126,10 +103,9 @@ html {
   font-weight: bold;
   cursor: pointer;
 }
-
 .task-box {
   display: flex;
-  width: 100%;
+  width: 453px;
   border: 1px solid black;
   justify-content: space-between;
   align-items: center;
@@ -137,144 +113,74 @@ html {
   padding: 10px;
   border-radius: 10px;
   border: 1px solid rgb(221, 151, 22);
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
-
 .task-box .edit-btn-img {
   height: 28px;
   background-color: rgb(49, 46, 46);
   border: none;
 }
-
 .task-box .delete-btn-img {
   height: 28px;
   background-color: rgb(49, 46, 46);
   border: none;
 }
-
 .task-box .delete-btn {
   background-color: rgb(49, 46, 46);
   border: none;
+  cursor: pointer;
 }
-
 .task-box .edit-btn {
   background-color: rgb(49, 46, 46);
   border: none;
   margin-right: 7px;
+  cursor: pointer;
 }
-
 .task-box .check-box-text {
   display: flex;
   align-items: center;
   margin-left: 10px;
 }
-
 .task-box .radio-btn {
   width: 27px;
   height: 27px;
   border-radius: 50%;
   border: 2px solid rgb(243, 66, 17);
-  background-color: rgb(49, 46, 46); /* Default background color */
+  background-color: rgb(49, 46, 46);
   cursor: pointer;
+  color: white; /* Ensure text is visible */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
 .task-box .radio-btn.checked {
-  background-color: green; /* Change to green when checked */
+  background-color: green;
+  color: white;
 }
-
 .task-box .task-text {
   font-size: 20px;
   font-weight: 600;
   color: rgb(232, 232, 192);
   margin-left: 10px;
 }
-
+.task-box .task-text.checked {
+  text-decoration: line-through;
+  color: gray;
+}
 .task-box .edit-delete-btn {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-right: 14px;
 }
-
-/* Media Queries for Responsiveness */
-@media (max-width: 400px) {
-  .rect-border {
-    padding: 20px;
-  }
-
-  .rect-border .rectangle-og-border {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .rect-border .input-div {
-    width: 90%;
-  }
-
-  .task-box {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 20px;
-  }
-
-  .task-box .check-box-text {
-    margin-left: 0;
-  }
-
-  .task-box .edit-delete-btn {
-    margin-top: 10px;
-    margin-right: 0;
-    align-self: flex-end;
-  }
+.edit-input {
+  font-size: 20px;
+  font-weight: 600;
+  color: rgb(232, 232, 192);
+  background-color: rgb(49, 46, 46);
+  border: none;
+  margin-left: 10px;
+  padding: 5px;
+  border-radius: 5px;
 }
 
-@media (max-width: 768px) {
-  .rect-border .rectangle-og-border {
-    padding: 30px 30px;
-  }
-
-  .rect-border .circle .number-count {
-    font-size: 40px;
-  }
-
-  .task-box {
-    padding: 15px;
-  }
-}
-
-@media (max-width: 480px) {
-  .rect-border .rectangle-og-border {
-    padding: 20px 20px;
-  }
-
-  .rect-border .upper-text {
-    font-size: 28px;
-  }
-
-  .rect-border .lower-text {
-    font-size: 16px;
-  }
-
-  .rect-border .circle .number-count {
-    font-size: 30px;
-  }
-
-  .rect-border .input-div {
-    flex-direction: column;
-    width: 100%;
-  }
-
-  .rect-border .input-div .input-field {
-    width: 100%;
-    margin-left: 0;
-    margin-bottom: 10px;
-  }
-
-  .rect-border .input-div .add-button {
-    width: 100%;
-  }
-
-  .task-box {
-    padding: 10px;
-  }
-}
